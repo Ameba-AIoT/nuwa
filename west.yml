@@ -1,0 +1,43 @@
+# Copyright (c) 2024 Realtek Semiconductor Corp.
+# SPDX-License-Identifier: Apache-2.0
+
+# The west manifest file for Realtek Nuwa SDK.
+
+manifest:
+  defaults:
+    remote: upstream
+
+  remotes:
+    - name: upstream
+      url-base: git@github.com:Ameba-AIoT
+
+  # workspace topdir cannot be a .git repository, otherwise west build will fail, which means .west and .git can't be in the same directory.
+  # If two projects have the same name, the project defined first has highest precedence.
+  # Please add items below based on alphabetical order
+  projects:
+    - name: hal_realtek
+      repo-path: nuwa_hal_realtek
+      path: modules/hal/realtek
+      revision: main
+    - name: tools
+      # repo-path is optional. If given, this is concatenated on to the remote’s url-base instead of the project’s name to form its fetch URL.
+      repo-path: nuwa_tools
+      path: tools
+      revision: main
+    # - name: cmsis
+    #   path: modules/hal/cmsis
+    #   revision: main
+    - name: zephyr
+      path: zephyr
+      # west-commands: scripts/west-commands.yml
+      import:
+        name-allowlist:
+          - cmsis
+      revision: main
+
+# The available self keys are path/west-commands/import, and all items are optional.
+# If path is not given, the basename of the path component in the manifest repository URL(by west init -m) will be used by default.
+# the .git repository containing west.yml is never modified by west
+# the cmsis/realtek/zephyr need to be a .git by west and cmake.
+  self:
+    path: manifests
