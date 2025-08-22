@@ -41,8 +41,8 @@ After the compilation is complete, the generated image is located in the `nuwa\i
 
 For more details on how to use ImageTool, refer to the Tools section on the website:
 ```
-English: [https://ameba-aiot.github.io/ameba-iot-docs/freertos/en/latest/](https://aiot.realmcu.com/docs/en/latest/rst_tools/image_tool/1_image_tool_toprst.html)
-Chinese: [https://ameba-aiot.github.io/ameba-iot-docs/freertos/cn/latest/](https://aiot.realmcu.com/docs/cn/latest/rst_tools/image_tool/1_image_tool_toprst.html)
+English: https://aiot.realmcu.com/docs/en/latest/rst_tools/image_tool/1_image_tool_toprst.html
+Chinese: https://aiot.realmcu.com/docs/cn/latest/rst_tools/image_tool/1_image_tool_toprst.html
 ```
 
 ## Feedback
