@@ -18,12 +18,12 @@ manifest:
     - name: hal_realtek
       repo-path: nuwa_hal_realtek
       path: modules/hal/realtek
-      revision: f606d1959b29473caccd9f7a3bb753095a9d9240
+      revision: rtl8735b
     - name: tools
       # repo-path is optional. If given, this is concatenated on to the remote’s url-base instead of the project’s name to form its fetch URL.
       repo-path: nuwa_tools
       path: tools
-      revision: 7f5ec8eada94560cc9dfb0241683c35f2581194b
+      revision: rtl8735b
     # - name: cmsis
     #   path: modules/hal/cmsis
     #   revision: main
@@ -33,7 +33,7 @@ manifest:
       import:
         name-allowlist:
           - cmsis
-      revision: 73d37c6b6a917bd4f1bdf2d7d448b5a458bb491d
+      revision: rtl8735b
 
 # The available self keys are path/west-commands/import, and all items are optional.
 # If path is not given, the basename of the path component in the manifest repository URL(by west init -m) will be used by default.
