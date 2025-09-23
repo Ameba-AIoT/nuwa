@@ -33,6 +33,7 @@ manifest:
       import:
         name-allowlist:
           - cmsis
+          - mbedtls
       revision: rtl8735b
 
 # The available self keys are path/west-commands/import, and all items are optional.
