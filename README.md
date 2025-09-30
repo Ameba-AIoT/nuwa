@@ -9,7 +9,7 @@ This repository contains the source code and tools for Realtek Ameba IoT SoCs, i
 * The toolchain is `asdk-10.3.1`.
 * Linux platform is supported for now
 * Python version 3.8 or higher is required.
-* cmake, device-tree-compiler, west, python3-venv are also required.
+* cmake, ninja, device-tree-compiler, west, python3-venv are also required.
 
 ## Compiling the Project
 
