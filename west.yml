@@ -34,6 +34,7 @@ manifest:
         name-allowlist:
           - cmsis
           - mbedtls
+          - littlefs
       revision: rtl8735b
 
 # The available self keys are path/west-commands/import, and all items are optional.
