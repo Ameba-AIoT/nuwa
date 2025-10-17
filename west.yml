@@ -18,12 +18,15 @@ manifest:
     - name: hal_realtek
       repo-path: nuwa_hal_realtek
       path: modules/hal/realtek
-      revision: f606d1959b29473caccd9f7a3bb753095a9d9240
+      revision: e91d2b03552fe85c6f6a2142624670b6cfb1e08e
+    - name: nuwa_lib
+      path: modules/hal/realtek/zephyr/blobs
+      revision: 37c60fc713e8809c2266425f04d7182461d1b006
     - name: tools
       # repo-path is optional. If given, this is concatenated on to the remote’s url-base instead of the project’s name to form its fetch URL.
       repo-path: nuwa_tools
       path: tools
-      revision: 7f5ec8eada94560cc9dfb0241683c35f2581194b
+      revision: eb07d5e8591a03c0f8237a3a2e95f675b2ee4895
     # - name: cmsis
     #   path: modules/hal/cmsis
     #   revision: main
