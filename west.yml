@@ -18,29 +18,32 @@ manifest:
     - name: hal_realtek
       repo-path: nuwa_hal_realtek
       path: modules/hal/realtek
-      revision: a5972a513ae6986ff7a2e9642b3b6e3c7b37e411
+      revision: fef907c0e5a903ecc87e47d7803189262dcb7156
     - name: nuwa_lib
       path: modules/hal/realtek/zephyr/blobs
-      revision: 957051c97c2192fe640475092be1c885365e718c
+      revision: d9a23ec60d44628a27b354d89597ac58093d4a20
+    - name: lvgl
+      path: modules/lib/gui/lvgl
+      repo-path: lvgl-zephyr
+      revision: ameba/v4.2.1
     - name: tools
       # repo-path is optional. If given, this is concatenated on to the remote’s url-base instead of the project’s name to form its fetch URL.
       repo-path: nuwa_tools
       path: tools
-      revision: 73d590e355bc1c92817f8eb69725e70e40dd8b55
+      revision: b9b0a7c6fb3d23129dc9ef0002d409b0f5a2dbae
     # - name: cmsis
     #   path: modules/hal/cmsis
     #   revision: main
     - name: zephyr
       path: zephyr
       # west-commands: scripts/west-commands.yml
-      revision: 22e2c50242304505fa83307b934b0dfd9cbc49ce
+      revision: 6ecfbece18f4d82d0f4d2f6121b15529b6b307fb
       import:
         name-allowlist:
           - cmsis_6
           - littlefs
           - fatfs
           - mbedtls
-          - lvgl
 
 # The available self keys are path/west-commands/import, and all items are optional.
 # If path is not given, the basename of the path component in the manifest repository URL(by west init -m) will be used by default.
