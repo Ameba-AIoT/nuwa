@@ -32,7 +32,7 @@ manifest:
       # west-commands: scripts/west-commands.yml
       import:
         name-allowlist:
-          - cmsis
+          - cmsis_6
           - mbedtls
           - littlefs
           - fatfs
