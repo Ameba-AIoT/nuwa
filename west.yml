@@ -24,9 +24,10 @@ manifest:
       repo-path: nuwa_tools
       path: tools
       revision: rtl8735b
-    # - name: cmsis
-    #   path: modules/hal/cmsis
-    #   revision: main
+    - name: platform
+      repo-path: ameba-zephyr-pro2-platform
+      path: platform
+      revision: main
     - name: zephyr
       path: zephyr
       # west-commands: scripts/west-commands.yml
