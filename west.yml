@@ -30,7 +30,7 @@ manifest:
       # repo-path is optional. If given, this is concatenated on to the remote’s url-base instead of the project’s name to form its fetch URL.
       repo-path: nuwa_tools
       path: tools
-      revision: b9b0a7c6fb3d23129dc9ef0002d409b0f5a2dbae
+      revision: 540585b430bf61ee14e9aa67ff4251dfa7b94ac0
     # - name: cmsis
     #   path: modules/hal/cmsis
     #   revision: main
