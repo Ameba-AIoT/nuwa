@@ -9,7 +9,8 @@ manifest:
 
   remotes:
     - name: upstream
-      url-base: git@github.com:Ameba-AIoT
+      url-base: https://github.com/Ameba-AIoT
+      # url-base: git@github.com:Ameba-AIoT
 
   # workspace topdir cannot be a .git repository, otherwise west build will fail, which means .west and .git can't be in the same directory.
   # If two projects have the same name, the project defined first has highest precedence.
@@ -18,10 +19,10 @@ manifest:
     - name: hal_realtek
       repo-path: nuwa_hal_realtek
       path: modules/hal/realtek
-      revision: fef907c0e5a903ecc87e47d7803189262dcb7156
+      revision: 0bf0c655e817ca6cf1d0aa24c1007ee631bcf984
     - name: nuwa_lib
       path: modules/hal/realtek/zephyr/blobs
-      revision: d9a23ec60d44628a27b354d89597ac58093d4a20
+      revision: bae8b2fea2ead88694a2523c6eee5c1c7e66faae
     - name: lvgl
       path: modules/lib/gui/lvgl
       repo-path: lvgl-zephyr
@@ -30,20 +31,18 @@ manifest:
       # repo-path is optional. If given, this is concatenated on to the remote’s url-base instead of the project’s name to form its fetch URL.
       repo-path: nuwa_tools
       path: tools
-      revision: 540585b430bf61ee14e9aa67ff4251dfa7b94ac0
-    # - name: cmsis
-    #   path: modules/hal/cmsis
-    #   revision: main
+      revision: 76c9299d5ce9c1f851c6e4bca9deaa601cf4b4f0
     - name: zephyr
       path: zephyr
       # west-commands: scripts/west-commands.yml
-      revision: 6ecfbece18f4d82d0f4d2f6121b15529b6b307fb
+      revision: 7cbc7466178f94d0f65adc0ce5f6165748a7976c
       import:
         name-allowlist:
           - cmsis_6
           - littlefs
           - fatfs
           - mbedtls
+          - zcbor
 
 # The available self keys are path/west-commands/import, and all items are optional.
 # If path is not given, the basename of the path component in the manifest repository URL(by west init -m) will be used by default.
