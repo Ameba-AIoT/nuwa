@@ -21,8 +21,8 @@ manifest:
       path: modules/hal/realtek
       revision: 0bf0c655e817ca6cf1d0aa24c1007ee631bcf984
     - name: nuwa_lib
-      path: modules/hal/realtek/zephyr/blobs
-      revision: bae8b2fea2ead88694a2523c6eee5c1c7e66faae
+      path: modules/hal/realtek/zephyr/blobs/ameba
+      revision: 83e8ff741cd69db666d62e5cb287b0912a553ca7
     - name: lvgl
       path: modules/lib/gui/lvgl
       repo-path: lvgl-zephyr
