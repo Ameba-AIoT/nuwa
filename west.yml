@@ -19,10 +19,10 @@ manifest:
     - name: hal_realtek
       repo-path: nuwa_hal_realtek
       path: modules/hal/realtek
-      revision: 0bf0c655e817ca6cf1d0aa24c1007ee631bcf984
+      revision: 58dd1dc9632b658545be026a278ddf4dd2d8ca45
     - name: nuwa_lib
       path: modules/hal/realtek/zephyr/blobs/ameba
-      revision: 83e8ff741cd69db666d62e5cb287b0912a553ca7
+      revision: 23857dfb157986b8ff4fbfa4a8ee828128ddc26d
     - name: lvgl
       path: modules/lib/gui/lvgl
       repo-path: lvgl-zephyr
@@ -31,11 +31,11 @@ manifest:
       # repo-path is optional. If given, this is concatenated on to the remote’s url-base instead of the project’s name to form its fetch URL.
       repo-path: nuwa_tools
       path: tools
-      revision: 76c9299d5ce9c1f851c6e4bca9deaa601cf4b4f0
+      revision: 8dac70e167eb47591a3273c9581a2ac3763fc6e8
     - name: zephyr
       path: zephyr
       # west-commands: scripts/west-commands.yml
-      revision: 7cbc7466178f94d0f65adc0ce5f6165748a7976c
+      revision: de28180a293be23dc28b52b2699a23f538b135b1
       import:
         name-allowlist:
           - cmsis_6
