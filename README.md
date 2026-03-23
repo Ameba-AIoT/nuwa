@@ -1,10 +1,9 @@
 ## Introduction
 
 This repository contains the source code and tools for Realtek Ameba IoT SoCs, including:
-- AmebaDPlus
-  - RTL872xda_evb
-- AmebaD
-  - RTL872xd_evb
+- rtl8721f_evb
+- rtl872xda_evb
+- rtl872xd_evb
 
 ## Setup Build Environment
 
@@ -30,7 +29,7 @@ And use `$ ./nuwa.py update` to update the lastest code.
 
 ## Flashing
 
-After the compilation is complete, the generated image is located in the `nuwa\images` folder. Please use the software in `nuwa\tools\ameba\ImageTool_Legacy` to download the image to the SoC.
+After the compilation is complete, the generated image is located in the `nuwa\images` folder. Please use the software in `nuwa\tools\ameba\ImageTool` to download the image to the SoC.
 
 * Environment Requirements: EX. WinXP, Win 7 or later, Microsoft .NET Framework 4.0.
 * Connect chip and PC with USB wire.
@@ -41,8 +40,8 @@ After the compilation is complete, the generated image is located in the `nuwa\i
 
 For more details on how to use ImageTool, refer to the Tools section on the website:
 ```
-English: https://aiot.realmcu.com/docs/en/latest/rst_tools/image_tool/1_image_tool_toprst.html
-Chinese: https://aiot.realmcu.com/docs/cn/latest/rst_tools/image_tool/1_image_tool_toprst.html
+English: https://aiot.realmcu.com/en/latest/tools/image_tool/index.html
+Chinese: https://aiot.realmcu.com/zh/latest/tools/image_tool/index.html
 ```
 
 ## Feedback
