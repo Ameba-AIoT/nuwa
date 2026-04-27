@@ -19,28 +19,28 @@ manifest:
     - name: hal_realtek
       repo-path: nuwa_hal_realtek
       path: modules/hal/realtek
-      revision: ca2ce1773ca4779523c029cb4c6afe10ac404ae6
+      revision: cc622690ac43402f48c6254f65cb1d1aa3a54ee2
     - name: nuwa_lib
       path: modules/hal/realtek/zephyr/blobs/ameba
-      revision: f60fc97640d8960d3313e5183aecf28442273c08
+      revision: 144be47089f33b26839d6fb00bf8b273bf2d8891
     - name: nuwa-mcuboot
       path: bootloader/mcuboot
-      revision: 3b1edb7df38ee8736868bc3f74fb65dc8b5fc9ba
+      revision: cefe2c6178e68370e713a8230158004bf94eefdf
     - name: tf-m
       path: modules/tee/tf-m/trusted-firmware-m
       repo-path: nuwa-trusted-firmware-m
-      revision: e5312383d6931d9586d9aff40649e2acdb69269f
+      revision: 0be61d2a7ebfbfc0be532f26706b665267e16fc5
     - name: lvgl
       path: modules/lib/gui/lvgl
       repo-path: lvgl-zephyr
       revision: ameba/v4.2.1
     - name: nuwa_tools
       path: tools
-      revision: 440ddc2c1f7ba84d7ae4bde5effc80e9e2a6d0c2
+      revision: d0554ee42023f8139ffd032e110ee2b69dc01602
     - name: zephyr
       path: zephyr
       # west-commands: scripts/west-commands.yml
-      revision: 70e905d41231103e34df47f8478bb471806235cb
+      revision: 6441bbdce9856232b1850a56b6c3d5df228d4c98
       import:
         name-allowlist:
           - cmsis_6
