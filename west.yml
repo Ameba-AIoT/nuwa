@@ -20,6 +20,7 @@ manifest:
       repo-path: nuwa_hal_realtek
       path: modules/hal/realtek
       revision: cc622690ac43402f48c6254f65cb1d1aa3a54ee2
+      west-commands: west/west-commands.yml
     - name: nuwa_lib
       path: modules/hal/realtek/zephyr/blobs/ameba
       revision: 144be47089f33b26839d6fb00bf8b273bf2d8891
