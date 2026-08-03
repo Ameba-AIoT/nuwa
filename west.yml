@@ -19,7 +19,7 @@ manifest:
     - name: hal_realtek
       repo-path: nuwa_hal_realtek
       path: modules/hal/realtek
-      revision: 6d731dd9aff74e58d2bd5fde67a148f840f514e6
+      revision: af962df0dd9b65c2338891d650d7d7a850417a03
       west-commands: west/west-commands.yml
     - name: nuwa_lib
       path: modules/hal/realtek/zephyr/blobs/ameba
@@ -31,13 +31,21 @@ manifest:
       path: modules/tee/tf-m/trusted-firmware-m
       repo-path: nuwa-trusted-firmware-m
       revision: db290141044eaa97a380512e5c9fc400f2b581d0
+    - name: psa-arch-tests
+      path: modules/tee/tf-m/psa-arch-tests
+      repo-path: nuwa-psa-arch-tests
+      revision: 5677c9e7254485fed935c28b784217e1bcd46395
+    - name: tf-a
+      path: modules/tee/tf-a/trusted-firmware-a
+      repo-path: nuwa-trusted-firmware-a
+      revision: 381d2375f83af6296586c745ca194cd75b891be7
     - name: lvgl
       path: modules/lib/gui/lvgl
       repo-path: lvgl-zephyr
       revision: 4bf24d50859c45415813deece82d97b192820466
     - name: nuwa_tools
       path: tools
-      revision: 6c1fc863dd76420870bdfdfb984c2d4cd3bed0cd
+      revision: aaa75cbc3274f616765cdccd8b9e3393999d9a0d
     - name: zephyr
       path: zephyr
       # west-commands: scripts/west-commands.yml
@@ -58,5 +66,6 @@ manifest:
 # If path is not given, the basename of the path component in the manifest repository URL(by west init -m) will be used by default.
 # the .git repository containing west.yml is never modified by west
 # the cmsis/realtek/zephyr need to be a .git by west and cmake.
+
   self:
     path: manifests
