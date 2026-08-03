@@ -19,36 +19,40 @@ manifest:
     - name: hal_realtek
       repo-path: nuwa_hal_realtek
       path: modules/hal/realtek
-      revision: ec4b4b11ec55a12e4f43a83a7f332038d151cfce
+      revision: 6d731dd9aff74e58d2bd5fde67a148f840f514e6
       west-commands: west/west-commands.yml
     - name: nuwa_lib
       path: modules/hal/realtek/zephyr/blobs/ameba
-      revision: 8289a0a888e9bfd1b21b4cf6d029449d847260f8
+      revision: 924d7ae2d185eead702a726abe42d1bed1bbf308
     - name: nuwa-mcuboot
       path: bootloader/mcuboot
-      revision: cefe2c6178e68370e713a8230158004bf94eefdf
+      revision: 029c1a882bb9063cd70bb0a676de0d4740d12d9f
     - name: tf-m
       path: modules/tee/tf-m/trusted-firmware-m
       repo-path: nuwa-trusted-firmware-m
-      revision: b6dcf69f43ca3437b8182b12bb4eb32c3b414382
+      revision: db290141044eaa97a380512e5c9fc400f2b581d0
     - name: lvgl
       path: modules/lib/gui/lvgl
       repo-path: lvgl-zephyr
-      revision: ameba/v4.2.1
+      revision: 4bf24d50859c45415813deece82d97b192820466
     - name: nuwa_tools
       path: tools
-      revision: cb6d89db2fbaf4aee428af2dfff16cc7f9a24586
+      revision: 6c1fc863dd76420870bdfdfb984c2d4cd3bed0cd
     - name: zephyr
       path: zephyr
       # west-commands: scripts/west-commands.yml
-      revision: a748d793f4206331cdfb23cf545ecdf7efcac2a7
+      revision: 3be1be06b3fa34ae684cb5174287889383cef35e
       import:
         name-allowlist:
+          - cmsis
           - cmsis_6
           - littlefs
           - fatfs
           - mbedtls
+          - mbedtls-3.6
           - zcbor
+          - tf-m-tests
+          - tf-psa-crypto
 
 # The available self keys are path/west-commands/import, and all items are optional.
 # If path is not given, the basename of the path component in the manifest repository URL(by west init -m) will be used by default.
