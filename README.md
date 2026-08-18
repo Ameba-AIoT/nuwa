@@ -4,6 +4,7 @@ This repository contains the source code and tools for Realtek Ameba IoT SoCs, i
 - rtl8721f_evb
 - rtl872xda_evb
 - rtl872xd_evb
+- rtl8730e_evb
 
 ## Setup Build Environment
 
