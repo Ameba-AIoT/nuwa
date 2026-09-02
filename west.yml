@@ -19,7 +19,7 @@ manifest:
     - name: hal_realtek
       repo-path: nuwa_hal_realtek
       path: modules/hal/realtek
-      revision: c54918799a6a09f81fca54d5eeef04a6ef8288d4
+      revision: 521a2a213d2e3e9ea05f448fd05e493bf0d1e588
       west-commands: west/west-commands.yml
     - name: nuwa_lib
       path: modules/hal/realtek/zephyr/blobs/ameba
@@ -30,7 +30,7 @@ manifest:
     - name: tf-m
       path: modules/tee/tf-m/trusted-firmware-m
       repo-path: nuwa-trusted-firmware-m
-      revision: a77d580d9497c4ff27a1d550f27132801e3a650f
+      revision: 7f35f5f233b932b0165f55c7ce830bc0dc0f25c8
     - name: psa-arch-tests
       path: modules/tee/tf-m/psa-arch-tests
       repo-path: nuwa-psa-arch-tests
@@ -45,11 +45,11 @@ manifest:
       revision: 4bf24d50859c45415813deece82d97b192820466
     - name: nuwa_tools
       path: tools
-      revision: 0013dc3c13949810cec8f32ee9d65f3f36839beb
+      revision: e46af6d99cacf99c8d1f00fb1ded1e7fe0710787
     - name: zephyr
       path: zephyr
       # west-commands: scripts/west-commands.yml
-      revision: a7ad70bf08a3f40d33feb54e9800a94ab249c6ac
+      revision: e1a62a0cf5e70834e3a9a35541598292e5e60f5f
       import:
         name-allowlist:
           - cmsis
