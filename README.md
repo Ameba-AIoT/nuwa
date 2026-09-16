@@ -1,50 +1,110 @@
-## Introduction
+<div align="center">
 
-This repository contains the source code and tools for Realtek Ameba IoT SoCs, including:
-- rtl8721f_evb
-- rtl872xda_evb
-- rtl872xd_evb
-- rtl8730e_evb
+# Nuwa — Ameba Zephyr SDK
 
-## Setup Build Environment
+**The official [Zephyr RTOS](https://zephyrproject.org/)-based IoT development framework for Realtek Ameba series chips.**
 
-* The toolchain will be intalled in `/opt/rtk-toolchain` by default. If an error "Error: No Toolchain in `/opt/rtk-toolchain/vsdk-10.3.1/linux/newlib`" encounters when building the project, please refer to ApplicationNote section **Installing Toolchain** for more details.
-* Linux platform is supported for now, Ubuntu version 16.04 64-bit or higher is required.
-* Windows built with VScode will be supported in the future.
-* Python version 3.7 or higher is required. Run `python --version` to check the version. If an error "Command `python` not found" encounters, please refer to ApplicationNote section **Preparing GCC Environment** install python3. If still error appears, please run `sudo ln -s /usr/bin/python3 /usr/bin/python` to create symbolic link from `/usr/bin/python3` to `/usr/bin/python`.
+[![RTOS](https://badgen.net/badge/RTOS/Zephyr/blue)](https://zephyrproject.org/)
+[![Language](https://badgen.net/badge/language/C/blue)](https://github.com/Ameba-AIoT/nuwa/search?l=c)
+[![License](https://badgen.net/badge/License/Apache%202.0/lightgrey)](LICENSE)
+[![Last Commit](https://badgen.net/github/last-commit/Ameba-AIoT/nuwa/main?icon=github)](https://github.com/Ameba-AIoT/nuwa/commits/main)
 
-## Compiling the Project
+[English](README.md) · [中文版](README_CN.md) · [文档 / Docs](https://aiot.realmcu.com/en/latest/zephyr/) · [Products](https://aiot.realmcu.com/en/solution/zephyr.html)
 
-You can download and compile the SDK using the following steps
+</div>
+
+Nuwa is the official Zephyr RTOS-based IoT development framework for Realtek Ameba series SoCs. It uses [west](https://docs.zephyrproject.org/latest/develop/west/index.html) as its meta-tool for multi-repository management, and this repository is the **west manifest repository** that tracks commit versions of all sub-repositories.
+
+## 🔌 Supported Chips
+
+| Chip       | Zephyr Support |
+|:---------- |:--------------:|
+| RTL8721F   | ✅ Supported   |
+| RTL8721Dx  | ✅ Supported   |
+| RTL8730E   | ✅ Supported   |
+
+For the full chip and driver support matrix, visit [Ameba Zephyr Solutions](https://aiot.realmcu.com/en/solution/zephyr.html).
+
+## 📥 Getting Started
+
+The SDK uses a multi-repository structure managed by `west`. The [Zephyr SDK Documentation](https://aiot.realmcu.com/en/latest/zephyr/) covers environment setup, build system, peripheral drivers, Wi-Fi, OTA, TF-M, and more.
+
+### Quick Start
+
+```bash
+# 1. Create and activate a Python virtual environment
+python3 -m venv ~/nuwa/.venv
+source ~/nuwa/.venv/bin/activate
+
+# 2. Install west
+pip install west
+
+# 3. Get the SDK
+cd ~/nuwa
+west init -m https://github.com/Ameba-AIoT/nuwa.git
+west update
+
+# 4. Create the nuwa.py shortcut
+ln -sf tools/meta_tools/nuwa.py nuwa.py
 ```
-$ mkdir nuwa && cd nuwa
-$ west init -m git@github.com:Ameba-AIoT/nuwa.git
-$ west update
-$ ln -sf tools/meta_tools/nuwa.py nuwa.py
-$ ./nuwa.py setup
-$ ./nuwa.py build -a <application> -d <device>
-```
-e.g.: `$ ./nuwa.py build -a zephyr/samples/hello_world -d rtl872xda_evb`
 
-And use `$ ./nuwa.py update` to update the lastest code.
+## 🏗️ Build
 
-## Flashing
-
-After the compilation is complete, the generated image is located in the `nuwa\images` folder. Please use the software in `nuwa\tools\ameba\ImageTool` to download the image to the SoC.
-
-* Environment Requirements: EX. WinXP, Win 7 or later, Microsoft .NET Framework 4.0.
-* Connect chip and PC with USB wire.
-* Choose the Device profiles according to the chip you use.
-* Select the corresponding serial port and transmission baud rate. The default baud rate is 1500000.
-* Select the images to be programmed.
-* Click the Download button and start. The progress bar will show the download progress of each image and the log window will show the operation status.
-
-For more details on how to use ImageTool, refer to the Tools section on the website:
-```
-English: https://aiot.realmcu.com/en/latest/tools/image_tool/index.html
-Chinese: https://aiot.realmcu.com/zh/latest/tools/image_tool/index.html
+```bash
+./nuwa.py build -b <BOARD> <SOURCE_DIR>
 ```
 
-## Feedback
-- If you have any issues or suggestions when using these documentations, please log in [RealMCU](https://www.realmcu.com/en/Account/Login) and give feedback.
-- If you find a bug or any error, you can directly create a Pull Request on GitHub.
+**Example**
+
+```bash
+./nuwa.py build -b rtl872xda_evb zephyr/samples/hello_world
+```
+
+**Keep up to date**
+
+```bash
+./nuwa.py update
+```
+
+**Other useful commands**
+
+```bash
+west build -t clean      # Partial clean (keeps configuration)
+west build -t pristine   # Full clean
+west build -t menuconfig # Open Kconfig menuconfig UI
+```
+
+## ⚡ Flash
+
+**On Windows** — connect the board via serial cable, then:
+
+```bash
+./nuwa.py flash --port <PORT>
+```
+
+**On Linux** — download and launch [AmebaRemoteService](https://aiot.realmcu.com/download/misc/AmebaRemoteService_v2.0.2.exe) on a Windows PC connected to the board, then run on the Linux host:
+
+```bash
+./nuwa.py flash --port <PORT> --remote-server <WINDOWS_IP>
+```
+
+## 🖥️ Monitor
+
+**On Windows** — connect the board via serial cable, then:
+
+```bash
+./nuwa.py monitor --port <PORT> -b 1500000 [--reset]
+```
+
+**On Linux** — with [AmebaRemoteService](https://aiot.realmcu.com/download/misc/AmebaRemoteService_v2.0.2.exe) running on the Windows PC connected to the board:
+
+```bash
+./nuwa.py monitor --port <PORT> -b 1500000 --remote-server <WINDOWS_IP> [--reset]
+```
+
+`--reset` reboots the board automatically when the monitor starts.
+
+## 💬 Feedback
+
+- **Bug reports / suggestions**: log in to [RealMCU](https://www.realmcu.com/en/Account/Login) and submit feedback.
+- **Code issues**: open a Pull Request or Issue directly on GitHub.
