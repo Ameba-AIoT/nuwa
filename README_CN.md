@@ -1,13 +1,15 @@
 <div align="center">
 
+<img src=".github/assets/image.png" alt="Nuwa — Ameba Zephyr SDK" width="800">
+
 # Nuwa — Ameba Zephyr SDK
 
 **基于 [Zephyr RTOS](https://zephyrproject.org/) 的 Realtek Ameba 系列芯片官方 IoT 开发框架。**
 
-[![RTOS](https://badgen.net/badge/RTOS/Zephyr/blue)](https://zephyrproject.org/)
-[![Language](https://badgen.net/badge/language/C/blue)](https://github.com/Ameba-AIoT/nuwa/search?l=c)
-[![License](https://badgen.net/badge/License/Apache%202.0/lightgrey)](LICENSE)
-[![Last Commit](https://badgen.net/github/last-commit/Ameba-AIoT/nuwa/main?icon=github)](https://github.com/Ameba-AIoT/nuwa/commits/main)
+[![RTOS](https://img.shields.io/badge/RTOS-Zephyr-1384C5?style=flat-square&logo=zephyrproject&logoColor=white)](https://zephyrproject.org/)
+[![Language](https://img.shields.io/badge/Language-C-A97BFF?style=flat-square&logo=c&logoColor=white)](https://github.com/Ameba-AIoT/nuwa/search?l=c)
+[![License](https://img.shields.io/badge/License-Apache%202.0-brightgreen?style=flat-square)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/Ameba-AIoT/nuwa/main?style=flat-square&logo=github&logoColor=white)](https://github.com/Ameba-AIoT/nuwa/commits/main)
 
 [English](README.md) · [中文版](README_CN.md) · [文档 / Docs](https://aiot.realmcu.com/zh/latest/zephyr/) · [产品页](https://aiot.realmcu.com/zh/solution/zephyr.html)
 
@@ -52,21 +54,18 @@ ln -sf tools/meta_tools/nuwa.py nuwa.py
 
 ```bash
 ./nuwa.py build -b <BOARD> <SOURCE_DIR>
-```
 
-**示例**
-
-```bash
+# 例如
 ./nuwa.py build -b rtl872xda_evb zephyr/samples/hello_world
 ```
 
-**更新代码**
+更新所有仓库到最新版本：
 
 ```bash
 ./nuwa.py update
 ```
 
-**其他常用命令**
+其他命令：
 
 ```bash
 west build -t clean      # 部分清理（保留配置文件）

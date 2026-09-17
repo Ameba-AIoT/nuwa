@@ -19,7 +19,7 @@ manifest:
     - name: hal_realtek
       repo-path: nuwa_hal_realtek
       path: modules/hal/realtek
-      revision: 3358efe4a3bff76dbc56ebd0a1812fda3a4c5628
+      revision: e09911f87edc8cecb048edaf9615bd84517c9a8b
       west-commands: west/west-commands.yml
     - name: nuwa_lib
       path: modules/hal/realtek/zephyr/blobs/ameba
@@ -38,14 +38,14 @@ manifest:
     - name: tf-a
       path: modules/tee/tf-a/trusted-firmware-a
       repo-path: nuwa-trusted-firmware-a
-      revision: 381d2375f83af6296586c745ca194cd75b891be7
+      revision: 3d6135cabf5d839cc197272469263f395c55079b
     - name: lvgl
       path: modules/lib/gui/lvgl
       repo-path: lvgl-zephyr
       revision: 4bf24d50859c45415813deece82d97b192820466
     - name: nuwa_tools
       path: tools
-      revision: d6f297aeecf5f2b6452de87ceaa2f28edaf8ac1d
+      revision: 31e9888f45052b7dc31ed778d1a3e4438ee99b66
     - name: zephyr
       path: zephyr
       # west-commands: scripts/west-commands.yml
