@@ -30,7 +30,7 @@ manifest:
     - name: tf-m
       path: modules/tee/tf-m/trusted-firmware-m
       repo-path: nuwa-trusted-firmware-m
-      revision: 7840f623173688d0e5f4bb1f2355077d0656c1e5
+      revision: 5f9ec4e15b9ac7404a8944072ee666a55ea1bf27
     - name: psa-arch-tests
       path: modules/tee/tf-m/psa-arch-tests
       repo-path: nuwa-psa-arch-tests
@@ -49,7 +49,7 @@ manifest:
     - name: zephyr
       path: zephyr
       # west-commands: scripts/west-commands.yml
-      revision: a3302aa1e88bef6f1e0442514d088194cb1b0f51
+      revision: 76251e4b3d28bf253731f6755f975a3329b24e2f
       import:
         name-allowlist:
           - cmsis
