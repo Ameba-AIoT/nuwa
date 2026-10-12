@@ -19,7 +19,7 @@ manifest:
     - name: hal_realtek
       repo-path: nuwa_hal_realtek
       path: modules/hal/realtek
-      revision: 184700ee9ce918e3827fef235c0bb92d3718d514
+      revision: 0f139e8f0b47743e2304d7e0d9e66ba6e6a406b3
       west-commands: west/west-commands.yml
     - name: nuwa_lib
       path: modules/hal/realtek/zephyr/blobs/ameba
@@ -49,7 +49,7 @@ manifest:
     - name: zephyr
       path: zephyr
       # west-commands: scripts/west-commands.yml
-      revision: 551cde0eb054d43105097881b2d8e4b13e2768db
+      revision: c49e5318599bad17e62599606c1acaceee9d0984
       import:
         name-allowlist:
           - cmsis
